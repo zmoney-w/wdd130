@@ -1,0 +1,169 @@
+
+/* --- CSS Variables (Color Scheme & Fonts) --- */
+:root {
+  --primary-color: #1a4f6e;      /* deep river blue */
+  --secondary-color: #e8f4f8;    /* light sky */
+  --accent1-color: #0d2f40;      /* dark navy */
+  --accent2-color: #f0a500;      /* warm amber/gold */
+  --heading-font: "Georgia", "Times New Roman", serif;
+  --body-font: "Trebuchet MS", Verdana, sans-serif;
+}
+
+/* --- Box Model Reset --- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* --- Body --- */
+body {
+  font-family: var(--body-font);
+  color: var(--accent1-color);
+  background-color: var(--secondary-color);
+}
+
+/* --- Page Width & Centering --- */
+header, main, footer {
+  width: 840px;
+  margin: 0 auto;
+}
+
+/* --- Header --- */
+header {
+  background-color: var(--primary-color);
+  color: var(--accent2-color);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 16px;
+}
+
+header img {
+  width: 120px;
+  height: auto;
+}
+
+/*Navigation (header) */
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 16px;
+}
+
+nav ul li a {
+  color: var(--accent2-color);
+  text-decoration: none;
+  font-family: var(--body-font);
+  font-weight: bold;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+/* Headings */
+h1, h2 {
+  font-family: var(--heading-font);
+  color: var(--primary-color);
+}
+
+/* General Spacing */
+nav, p, section, article {
+  margin: 16px;
+  padding: 8px;
+}
+
+/* Footer */
+footer {
+  background-color: var(--accent1-color);
+  color: var(--secondary-color);
+  text-align: center;
+  padding: 16px;
+}
+
+footer p {
+  margin-bottom: 8px;
+  color: var(--secondary-color);
+}
+
+.socialmedia {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin: 8px 0 0 0;
+  padding: 0;
+}
+
+.socialmedia a {
+  text-decoration: none;
+}
+
+.socialmedia img {
+  width: 32px;
+  height: 32px;
+}
+
+/* Hero div: relative so children can be positioned on top of it */
+.hero {
+  position: relative;
+}
+
+/* Hero background image: fills the full width of the div */
+.hero img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* H1 overlaid on the hero image */
+h1 {
+  position: absolute;
+  top: 20px;
+  width: 100%;
+  padding: 16px;
+  text-align: center;
+  opacity: 0.85;
+  background-color: var(--accent1-color);
+  color: #fff;
+}
+
+/* Article overlaid on the hero image */
+.hero article {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  width: 55%;
+  background-color: rgba(26, 79, 110, 0.80); /* primary-color with transparency */
+  color: #fff;
+  padding: 16px;
+  border-radius: 4px;
+}
+
+.hero article p {
+  color: #fff;
+  margin: 8px 0 0 0;
+  padding: 0;
+}
+
+/* Small article image floated to the right */
+.hero article img {
+  float: right;
+  width: 125px;
+  height: auto;
+  margin: 0 0 8px 12px;
+  border: 2px solid var(--accent2-color);
+  border-radius: 4px;
+}
+
+
+section {
+  background-color: #fff;
+  border-left: 4px solid var(--accent2-color);
+  margin: 24px 0;
+  padding: 16px 24px;
+}
+
+section h2 {
+  margin-bottom: 8px;
+}
