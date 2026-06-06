@@ -1,41 +1,37 @@
-/* CSS Variables (Color Scheme & Fonts) */
+/* --- CSS Variables (Color Scheme & Fonts) --- */
 :root {
-  --primary-color: #1a4f6e;
-  /* deep river blue */
-  --secondary-color: #e8f4f8;
-  /* light sky */
-  --accent1-color: #0d2f40;
-  /* dark navy */
-  --accent2-color: #f0a500;
-  /* warm amber/gold */
+  --primary-color: #1a4f6e;      /* deep river blue */
+  --secondary-color: #e8f4f8;    /* light sky */
+  --accent1-color: #0d2f40;      /* dark navy */
+  --accent2-color: #f0a500;      /* warm amber/gold */
   --heading-font: "Georgia", "Times New Roman", serif;
   --body-font: "Trebuchet MS", Verdana, sans-serif;
 }
 
-/* Box Model Reset */
+/* --- Box Model Reset --- */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Body */
+/* --- Body --- */
 body {
   font-family: var(--body-font);
   color: var(--accent1-color);
   background-color: var(--secondary-color);
 }
 
-/* Page Width & Centering */
-header,
-main,
-footer {
+/* --- Page Width & Centering --- */
+header, main, footer {
   max-width: 840px;
   width: 100%;
   margin: 0 auto;
 }
 
-/* HEADER */
+/* =====================================================
+   HEADER  — CSS Grid layout: logo | nav
+   ===================================================== */
 header {
   background-color: var(--accent1-color);
   color: var(--accent2-color);
@@ -49,20 +45,22 @@ header {
   gap: 16px;
 }
 
-header>img {
+/* Logo image inside header */
+header > img {
   width: 120px;
   height: auto;
   display: block;
 }
 
-/* NAV */
+/* =====================================================
+   NAV  — CSS Flex layout for horizontal link list
+   ===================================================== */
 nav ul {
   list-style: none;
 
   /* Task 5: CSS Flex for horizontal nav layout */
   display: flex;
-  justify-content: flex-end;
-  /* push links to the right side */
+  justify-content: flex-end;   /* push links to the right side */
   gap: 24px;
 }
 
@@ -77,18 +75,20 @@ nav ul li a:hover {
   text-decoration: underline;
 }
 
-h1,
-h2 {
+/* Headings */
+h1, h2 {
   font-family: var(--heading-font);
   color: var(--primary-color);
 }
 
-/* HERO SECTION */
+/* =====================================================
+   HERO SECTION
+   ===================================================== */
 .hero {
   position: relative;
 }
 
-.hero>img {
+.hero > img {
   display: block;
   width: 100%;
   height: auto;
@@ -105,7 +105,7 @@ h1 {
   color: #fff;
 }
 
-.hero .hero-message {
+.hero article {
   position: absolute;
   bottom: 20px;
   left: 20px;
@@ -116,13 +116,13 @@ h1 {
   border-radius: 4px;
 }
 
-.hero .hero-message p {
+.hero article p {
   color: #fff;
   margin: 8px 0 0 0;
   padding: 0;
 }
 
-.hero .hero-message img {
+.hero article img {
   float: right;
   width: 125px;
   height: auto;
@@ -131,7 +131,9 @@ h1 {
   border-radius: 4px;
 }
 
-/* HISTORY SECTION */
+/* =====================================================
+   HISTORY SECTION — two-column Grid: text | image
+   ===================================================== */
 section {
   background-color: #fff;
   border-left: 4px solid var(--accent2-color);
@@ -144,6 +146,7 @@ section h2 {
   color: var(--primary-color);
 }
 
+/* Task 7: History section two-column grid layout */
 .history {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -167,7 +170,9 @@ section h2 {
   border: 3px solid var(--accent2-color);
 }
 
-/* ADVENTURES SECTION */
+/* =====================================================
+   ADVENTURES SECTION — five figures in a horizontal row
+   ===================================================== */
 .adventures {
   border-left: 4px solid var(--primary-color);
 }
@@ -176,20 +181,21 @@ section h2 {
   margin-bottom: 16px;
 }
 
+/* Task 8: Horizontal layout for five adventure figures */
 .adventures-gallery {
   display: flex;
   gap: 12px;
 }
 
 .adventures-gallery figure {
-  flex: 1;
+  flex: 1;                 /* each figure takes equal width */
   text-align: center;
 }
 
 .adventures-gallery img {
   width: 100%;
   height: 130px;
-  object-fit: cover;
+  object-fit: cover;       /* keeps images the same height, crops neatly */
   display: block;
   border-radius: 4px;
   border: 2px solid var(--secondary-color);
@@ -203,7 +209,9 @@ section h2 {
   font-family: var(--body-font);
 }
 
-/* FOOTER */
+/* =====================================================
+   FOOTER
+   ===================================================== */
 footer {
   background-color: var(--accent1-color);
   color: var(--secondary-color);
@@ -224,8 +232,7 @@ footer p {
 /* Task 9: Social icons horizontal + aligned to the right */
 .socialmedia {
   display: flex;
-  justify-content: flex-end;
-  /* icons pushed to the right */
+  justify-content: flex-end;   /* icons pushed to the right */
   gap: 16px;
   margin: 0;
   padding: 0;
