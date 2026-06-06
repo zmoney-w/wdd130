@@ -1,54 +1,69 @@
-
-/* --- CSS Variables (Color Scheme & Fonts) --- */
+/* CSS Variables (Color Scheme & Fonts) */
 :root {
-  --primary-color: #1a4f6e;      /* deep river blue */
-  --secondary-color: #e8f4f8;    /* light sky */
-  --accent1-color: #0d2f40;      /* dark navy */
-  --accent2-color: #f0a500;      /* warm amber/gold */
+  --primary-color: #1a4f6e;
+  /* deep river blue */
+  --secondary-color: #e8f4f8;
+  /* light sky */
+  --accent1-color: #0d2f40;
+  /* dark navy */
+  --accent2-color: #f0a500;
+  /* warm amber/gold */
   --heading-font: "Georgia", "Times New Roman", serif;
   --body-font: "Trebuchet MS", Verdana, sans-serif;
 }
 
-/* --- Box Model Reset --- */
+/* Box Model Reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* --- Body --- */
+/* Body */
 body {
   font-family: var(--body-font);
   color: var(--accent1-color);
   background-color: var(--secondary-color);
 }
 
-/* --- Page Width & Centering --- */
-header, main, footer {
-  width: 840px;
+/* Page Width & Centering */
+header,
+main,
+footer {
+  max-width: 840px;
+  width: 100%;
   margin: 0 auto;
 }
 
-/* --- Header --- */
+/* HEADER */
 header {
-  background-color: var(--primary-color);
+  background-color: var(--accent1-color);
   color: var(--accent2-color);
-  display: flex;
+
+  /* Task 4: CSS Grid for horizontal logo + nav layout */
+  display: grid;
+  grid-template-columns: auto 1fr;
   align-items: center;
-  justify-content: space-between;
+
   padding: 12px 16px;
+  gap: 16px;
 }
 
-header img {
+header>img {
   width: 120px;
   height: auto;
+  display: block;
 }
 
-/*Navigation (header) */
+/* NAV */
 nav ul {
   list-style: none;
+
+  /* Task 5: CSS Flex for horizontal nav layout */
   display: flex;
-  gap: 16px;
+  justify-content: flex-end;
+  /* push links to the right side */
+  gap: 24px;
 }
 
 nav ul li a {
@@ -62,61 +77,23 @@ nav ul li a:hover {
   text-decoration: underline;
 }
 
-/* Headings */
-h1, h2 {
+h1,
+h2 {
   font-family: var(--heading-font);
   color: var(--primary-color);
 }
 
-/* General Spacing */
-nav, p, section, article {
-  margin: 16px;
-  padding: 8px;
-}
-
-/* Footer */
-footer {
-  background-color: var(--accent1-color);
-  color: var(--secondary-color);
-  text-align: center;
-  padding: 16px;
-}
-
-footer p {
-  margin-bottom: 8px;
-  color: var(--secondary-color);
-}
-
-.socialmedia {
-  display: flex;
-  justify-content: center;
-  gap: 16px;
-  margin: 8px 0 0 0;
-  padding: 0;
-}
-
-.socialmedia a {
-  text-decoration: none;
-}
-
-.socialmedia img {
-  width: 32px;
-  height: 32px;
-}
-
-/* Hero div: relative so children can be positioned on top of it */
+/* HERO SECTION */
 .hero {
   position: relative;
 }
 
-/* Hero background image: fills the full width of the div */
-.hero img {
+.hero>img {
   display: block;
   width: 100%;
   height: auto;
 }
 
-/* H1 overlaid on the hero image */
 h1 {
   position: absolute;
   top: 20px;
@@ -128,26 +105,24 @@ h1 {
   color: #fff;
 }
 
-/* Article overlaid on the hero image */
-.hero article {
+.hero .hero-message {
   position: absolute;
   bottom: 20px;
   left: 20px;
   width: 55%;
-  background-color: rgba(26, 79, 110, 0.80); /* primary-color with transparency */
+  background-color: rgba(26, 79, 110, 0.80);
   color: #fff;
   padding: 16px;
   border-radius: 4px;
 }
 
-.hero article p {
+.hero .hero-message p {
   color: #fff;
   margin: 8px 0 0 0;
   padding: 0;
 }
 
-/* Small article image floated to the right */
-.hero article img {
+.hero .hero-message img {
   float: right;
   width: 125px;
   height: auto;
@@ -156,14 +131,111 @@ h1 {
   border-radius: 4px;
 }
 
-
+/* HISTORY SECTION */
 section {
   background-color: #fff;
   border-left: 4px solid var(--accent2-color);
   margin: 24px 0;
-  padding: 16px 24px;
+  padding: 24px;
 }
 
 section h2 {
-  margin-bottom: 8px;
+  margin-bottom: 12px;
+  color: var(--primary-color);
+}
+
+.history {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  align-items: center;
+}
+
+.history-text h2 {
+  margin-bottom: 12px;
+}
+
+.history-text p {
+  line-height: 1.7;
+}
+
+.history-img img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 4px;
+  border: 3px solid var(--accent2-color);
+}
+
+/* ADVENTURES SECTION */
+.adventures {
+  border-left: 4px solid var(--primary-color);
+}
+
+.adventures h2 {
+  margin-bottom: 16px;
+}
+
+.adventures-gallery {
+  display: flex;
+  gap: 12px;
+}
+
+.adventures-gallery figure {
+  flex: 1;
+  text-align: center;
+}
+
+.adventures-gallery img {
+  width: 100%;
+  height: 130px;
+  object-fit: cover;
+  display: block;
+  border-radius: 4px;
+  border: 2px solid var(--secondary-color);
+}
+
+.adventures-gallery figcaption {
+  margin-top: 6px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  color: var(--primary-color);
+  font-family: var(--body-font);
+}
+
+/* FOOTER */
+footer {
+  background-color: var(--accent1-color);
+  color: var(--secondary-color);
+
+  /* Row layout: copyright text on left, social icons on right */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 16px 24px;
+}
+
+footer p {
+  color: var(--secondary-color);
+  margin: 0;
+}
+
+/* Task 9: Social icons horizontal + aligned to the right */
+.socialmedia {
+  display: flex;
+  justify-content: flex-end;
+  /* icons pushed to the right */
+  gap: 16px;
+  margin: 0;
+  padding: 0;
+}
+
+.socialmedia a {
+  text-decoration: none;
+}
+
+.socialmedia img {
+  width: 32px;
+  height: 32px;
 }
