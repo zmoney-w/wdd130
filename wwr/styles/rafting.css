@@ -220,11 +220,21 @@ section h2 {
 .adventures-gallery img,
 .employee-gallery img {
   width: 100%;
-  height: 130px;
   object-fit: cover;
   display: block;
   border-radius: 4px;
   border: 2px solid var(--secondary-color);
+}
+
+.adventures-gallery img {
+  height: 130px;
+}
+
+/* Employee headshots are tall portrait photos, so they need
+   a taller crop than the landscape adventure photos above
+   to avoid cutting through people's faces */
+.employee-gallery img {
+  height: 220px;
 }
 
 .adventures-gallery figcaption,
