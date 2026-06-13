@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description"
-        content="Contact Wild Current Rafting — find our address, phone number, email, and location, meet our guides, and send us a message about trips, reservations, or general questions.">
+        content="Contact Wild Current Rafting for trip questions, reservations, or feedback. Find our address, phone, email, map, and meet our guides.">
     <meta name="author" content="Zachary Watts">
     <title>Contact Us | Wild Current Rafting</title>
     <link rel="stylesheet" href="styles/rafting.css">
@@ -41,10 +41,8 @@
         <!-- Map + Contact Form -->
         <section class="contact-main">
             <div class="map">
-                <iframe
-                    src="https://www.google.com/maps?q=Riggins,Idaho&output=embed"
-                    width="400" height="350" allowfullscreen loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade"
+                <iframe src="https://www.google.com/maps?q=Riggins,Idaho&output=embed" width="400" height="350"
+                    allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"
                     title="Map showing the location of Wild Current Rafting">
                 </iframe>
             </div>
@@ -63,9 +61,12 @@
 
                 <fieldset class="form-group">
                     <legend>Message Purpose</legend>
-                    <label><input type="radio" name="purpose" value="general" checked> General Inquiry</label>
-                    <label><input type="radio" name="purpose" value="reservation"> Reservation Question</label>
-                    <label><input type="radio" name="purpose" value="suggestion"> Website Suggestion</label>
+                    <label><input type="radio" name="purpose" value="general" id="purpose-general" checked> General
+                        Inquiry</label>
+                    <label><input type="radio" name="purpose" value="reservation" id="purpose-reservation"> Reservation
+                        Question</label>
+                    <label><input type="radio" name="purpose" value="suggestion" id="purpose-suggestion"> Website
+                        Suggestion</label>
                 </fieldset>
 
                 <div class="form-group">
