@@ -5,10 +5,14 @@
 
 /* --- CSS Variables (Color Scheme & Fonts) --- */
 :root {
-  --primary-color: #1a4f6e;        /* deep river blue */
-  --secondary-color: #e8f4f8;      /* light sky */
-  --accent1-color: #0d2f40;        /* dark navy */
-  --accent2-color: #f0a500;        /* warm amber/gold */
+  --primary-color: #1a4f6e;
+  /* deep river blue */
+  --secondary-color: #e8f4f8;
+  /* light sky */
+  --accent1-color: #0d2f40;
+  /* dark navy */
+  --accent2-color: #f0a500;
+  /* warm amber/gold */
   --heading-font: "Georgia", "Times New Roman", serif;
   --body-font: "Trebuchet MS", Verdana, sans-serif;
 }
@@ -30,7 +34,9 @@ body {
 /* --- Page Width & Centering ---
    max-width instead of width so the page never forces
    horizontal scrolling on narrow screens              */
-header, main, footer {
+header,
+main,
+footer {
   max-width: 840px;
   width: 100%;
   margin: 0 auto;
@@ -51,7 +57,7 @@ header {
 
 /* Logo — direct child img only (keeps header > img
    separate from any other img rules)                 */
-header > img {
+header>img {
   width: 120px;
   height: auto;
   display: block;
@@ -81,7 +87,8 @@ nav ul li a:hover {
 /* ============================================================
    HEADINGS
    ============================================================ */
-h1, h2 {
+h1,
+h2 {
   font-family: var(--heading-font);
   color: var(--primary-color);
 }
@@ -98,7 +105,7 @@ h1, h2 {
 
 /* Hero background image — direct child only so this rule
    does NOT accidentally apply to the article's img       */
-.hero > img {
+.hero>img {
   display: block;
   width: 100%;
   height: auto;
