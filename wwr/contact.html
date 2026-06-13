@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description"
+        content="Contact Wild Current Rafting — find our address, phone number, email, and location, meet our guides, and send us a message about trips, reservations, or general questions.">
+    <meta name="author" content="Zachary Watts">
+    <title>Contact Us | Wild Current Rafting</title>
+    <link rel="stylesheet" href="styles/rafting.css">
+</head>
+
+<body>
+
+    <header>
+        <img src="images/logo.png" alt="Wild Current Rafting Logo">
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="trips.html">Trips</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- Contact Intro -->
+        <div class="contact-intro">
+            <h1>Wild Current Rafting</h1>
+            <address>
+                1234 Salmon River Road<br>
+                Riggins, ID 83549<br>
+                Phone: <a href="tel:+12085550142">(208) 555-0142</a><br>
+                Email: <a href="mailto:info@wildcurrentrafting.com">info@wildcurrentrafting.com</a>
+            </address>
+        </div>
+
+        <!-- Map + Contact Form -->
+        <section class="contact-main">
+            <div class="map">
+                <iframe
+                    src="https://www.google.com/maps?q=Riggins,Idaho&output=embed"
+                    width="400" height="350" allowfullscreen loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"
+                    title="Map showing the location of Wild Current Rafting">
+                </iframe>
+            </div>
+
+            <form class="contact-form" action="#" method="post">
+
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <fieldset class="form-group">
+                    <legend>Message Purpose</legend>
+                    <label><input type="radio" name="purpose" value="general" checked> General Inquiry</label>
+                    <label><input type="radio" name="purpose" value="reservation"> Reservation Question</label>
+                    <label><input type="radio" name="purpose" value="suggestion"> Website Suggestion</label>
+                </fieldset>
+
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5"></textarea>
+                </div>
+
+                <div class="form-group checkbox-group">
+                    <label><input type="checkbox" name="newsletter" id="newsletter"> Please subscribe me to the
+                        monthly newsletter</label>
+                </div>
+
+                <button type="submit">Get in Touch!</button>
+
+            </form>
+        </section>
+
+        <!-- Employee Profiles -->
+        <section class="employees">
+            <h2>We Are Here to Serve You</h2>
+            <div class="employee-gallery">
+
+                <figure>
+                    <img src="images/employee1.jpg" alt="Headshot of Maria Chen, Owner and Head Guide">
+                    <figcaption>Maria Chen &mdash; Owner &amp; Head Guide</figcaption>
+                </figure>
+
+                <figure>
+                    <img src="images/employee2.jpg" alt="Headshot of Devon Carter, Lead River Guide">
+                    <figcaption>Devon Carter &mdash; Lead River Guide</figcaption>
+                </figure>
+
+                <figure>
+                    <img src="images/employee3.jpg" alt="Headshot of Priya Anand, Office Manager">
+                    <figcaption>Priya Anand &mdash; Office Manager</figcaption>
+                </figure>
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Wild Current Rafting | Zachary Watts</p>
+
+        <nav class="socialmedia">
+            <a href="https://facebook.com">
+                <img src="images/facebook.png" alt="Facebook Icon">
+            </a>
+            <a href="https://linkedin.com">
+                <img src="images/linkedin.png" alt="LinkedIn Icon">
+            </a>
+            <a href="https://instagram.com">
+                <img src="images/instagram.png" alt="Instagram Icon">
+            </a>
+        </nav>
+    </footer>
+
+</body>
+
+</html>
