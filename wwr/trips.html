@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description"
+        content="Explore Wild Current Rafting's trip offerings — from beginner-friendly half-day floats to multi-day Class V expeditions on Idaho's Salmon River.">
+    <meta name="author" content="Zachary Watts">
+    <title>Trips | Wild Current Rafting</title>
+    <link rel="stylesheet" href="styles/rafting.css">
+</head>
+
+<body>
+
+    <header>
+        <img src="images/logo.png" alt="Wild Current Rafting Logo">
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="trips.html">Trips</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- Page Intro -->
+        <section class="trips-intro">
+            <h2>Our Trips</h2>
+            <p>Whether you are looking for a relaxed scenic float with the family or a full-throttle
+                multi-day plunge through canyon rapids, we have a trip that was made for you. All trips
+                include certified guide service, safety gear, and a story worth telling.</p>
+        </section>
+
+        <!-- Trip Cards — CSS Grid, 2 columns; third card spans both -->
+        <section>
+            <div class="trips-grid">
+
+                <!-- Trip 1 -->
+                <div class="trip-card">
+                    <img src="images/adventure3.jpg"
+                        alt="A family enjoying a calm and scenic Half Day Adventure float">
+                    <div class="trip-card-body">
+                        <h3>Half Day Scenic Float</h3>
+                        <div class="trip-meta">
+                            <span>4 hrs</span>
+                            <span>Class I&ndash;II</span>
+                            <span>Ages 5+</span>
+                            <span>$65/person</span>
+                        </div>
+                        <p>
+                            Our most popular family trip. Drift through breathtaking canyon scenery, splash
+                            through splashy Class II riffles, and take in the wildlife along the riverbank.
+                            No experience needed — just show up ready to have fun. Snacks and a guide
+                            provided throughout.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Trip 2 -->
+                <div class="trip-card">
+                    <img src="images/adventure2.jpg"
+                        alt="Raft dropping into the churning Big Mallard rapid">
+                    <div class="trip-card-body">
+                        <h3>Full Day Whitewater Run</h3>
+                        <div class="trip-meta">
+                            <span>8 hrs</span>
+                            <span>Class III&ndash;IV</span>
+                            <span>Ages 12+</span>
+                            <span>$130/person</span>
+                        </div>
+                        <p>
+                            This is the real thing. You will tackle some of Idaho's most exciting named
+                            rapids — Big Mallard, Tumble Creek, and more — with a certified guide who knows
+                            every line on the river. A riverside lunch is included. Prior paddling experience
+                            is helpful but not required.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Trip 3 — spans both columns -->
+                <div class="trip-card">
+                    <img src="images/adventure1.jpg"
+                        alt="Rafters powering through the roaring Los Dientes del Diablo rapids">
+                    <div class="trip-card-body">
+                        <h3>3-Day Salmon River Expedition</h3>
+                        <div class="trip-meta">
+                            <span>3 days</span>
+                            <span>Class IV&ndash;V</span>
+                            <span>Ages 16+</span>
+                            <span>$495/person</span>
+                        </div>
+                        <p>
+                            For the serious adventurer. Over three days you will run the legendary River
+                            of No Return through remote canyon wilderness, camp on sandy beaches under the
+                            stars, and tackle Class V drops including the infamous Los Dientes del Diablo.
+                            All camping gear, meals, and experienced guide service included. Participants
+                            must be comfortable in Class III water at minimum.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Trip Summary Table -->
+        <section class="trips-table">
+            <h2>Trip Summary</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Trip Name</th>
+                        <th>Duration</th>
+                        <th>Difficulty</th>
+                        <th>Min. Age</th>
+                        <th>Price</th>
+                        <th>Includes</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Half Day Scenic Float</td>
+                        <td>4 hours</td>
+                        <td>Class I&ndash;II</td>
+                        <td>5</td>
+                        <td>$65/person</td>
+                        <td>Guide, gear, snacks</td>
+                    </tr>
+                    <tr>
+                        <td>Full Day Whitewater Run</td>
+                        <td>8 hours</td>
+                        <td>Class III&ndash;IV</td>
+                        <td>12</td>
+                        <td>$130/person</td>
+                        <td>Guide, gear, riverside lunch</td>
+                    </tr>
+                    <tr>
+                        <td>3-Day Salmon River Expedition</td>
+                        <td>3 days</td>
+                        <td>Class IV&ndash;V</td>
+                        <td>16</td>
+                        <td>$495/person</td>
+                        <td>Guide, gear, all meals, camping</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Call to Action — links to contact.html -->
+        <section class="trips-cta">
+            <h2>Ready to Book?</h2>
+            <p>Questions about which trip is right for you? Want to reserve your spot before the season
+                fills up? Reach out and we will get you on the water.</p>
+            <a href="contact.html" class="cta-button">Contact Us to Book</a>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Wild Current Rafting | Zachary Watts</p>
+
+        <nav class="socialmedia">
+            <a href="https://facebook.com">
+                <img src="images/facebook.png" alt="Facebook Icon">
+            </a>
+            <a href="https://linkedin.com">
+                <img src="images/linkedin.png" alt="LinkedIn Icon">
+            </a>
+            <a href="https://instagram.com">
+                <img src="images/instagram.png" alt="Instagram Icon">
+            </a>
+        </nav>
+    </footer>
+
+</body>
+
+</html>

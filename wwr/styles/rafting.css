@@ -392,3 +392,279 @@ footer p {
   color: #fff;
   background-color: var(--primary-color);
 }
+
+/* ============================================================
+   HOME PAGE — Newsletter Form
+   ============================================================ */
+.newsletter {
+  text-align: center;
+}
+
+.newsletter p {
+  margin-bottom: 16px;
+  line-height: 1.7;
+}
+
+.newsletter-form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.newsletter-form label {
+  font-weight: bold;
+  color: var(--primary-color);
+}
+
+.newsletter-form .field {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  text-align: left;
+}
+
+.newsletter-form input[type="text"],
+.newsletter-form input[type="email"] {
+  font-family: var(--body-font);
+  font-size: 1rem;
+  padding: 8px 12px;
+  border: 1px solid var(--primary-color);
+  border-radius: 4px;
+  min-width: 200px;
+}
+
+.newsletter-form button[type="submit"] {
+  align-self: flex-end;
+  font-family: var(--heading-font);
+  font-size: 1rem;
+  font-weight: bold;
+  color: var(--accent1-color);
+  background-color: var(--accent2-color);
+  border: none;
+  border-radius: 4px;
+  padding: 10px 24px;
+  cursor: pointer;
+}
+
+.newsletter-form button[type="submit"]:hover {
+  color: #fff;
+  background-color: var(--primary-color);
+}
+
+/* ============================================================
+   HOME PAGE — Call to Action
+   ============================================================ */
+.cta {
+  text-align: center;
+  background-color: var(--primary-color);
+  border-left: none;
+  color: #fff;
+  padding: 36px 24px;
+}
+
+.cta h2 {
+  color: #fff;
+  margin-bottom: 12px;
+}
+
+.cta p {
+  color: var(--secondary-color);
+  margin-bottom: 20px;
+  line-height: 1.7;
+}
+
+.cta-button {
+  display: inline-block;
+  font-family: var(--heading-font);
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: var(--accent1-color);
+  background-color: var(--accent2-color);
+  text-decoration: none;
+  border-radius: 4px;
+  padding: 14px 32px;
+}
+
+.cta-button:hover {
+  color: #fff;
+  background-color: var(--accent1-color);
+}
+
+/* ============================================================
+   HOME PAGE — Offerings Grid (CSS Grid, two columns)
+   ============================================================ */
+.offerings {
+  border-left: 4px solid var(--primary-color);
+}
+
+.offerings h2 {
+  margin-bottom: 20px;
+}
+
+.offerings-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.offering-card {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.offering-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 4px;
+  border: 2px solid var(--secondary-color);
+  display: block;
+}
+
+.offering-card h3 {
+  font-family: var(--heading-font);
+  color: var(--primary-color);
+  font-size: 1.1rem;
+}
+
+.offering-card p {
+  line-height: 1.7;
+  font-size: 0.95rem;
+}
+
+/* ============================================================
+   TRIPS PAGE — Trip Cards Grid
+   ============================================================ */
+.trips-intro {
+  text-align: center;
+}
+
+.trips-intro p {
+  line-height: 1.7;
+  margin-bottom: 0;
+}
+
+.trips-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.trip-card {
+  background-color: var(--secondary-color);
+  border-radius: 4px;
+  overflow: hidden;
+  border: 2px solid var(--primary-color);
+  display: flex;
+  flex-direction: column;
+}
+
+.trip-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  display: block;
+}
+
+.trip-card-body {
+  padding: 16px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.trip-card-body h3 {
+  font-family: var(--heading-font);
+  color: var(--primary-color);
+  font-size: 1.1rem;
+}
+
+.trip-meta {
+  display: flex;
+  gap: 16px;
+  font-size: 0.85rem;
+  font-weight: bold;
+  color: var(--primary-color);
+}
+
+.trip-card-body p {
+  line-height: 1.7;
+  font-size: 0.95rem;
+  flex: 1;
+}
+
+/* Third card spans both columns on a 2-col grid */
+.trip-card:last-child {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.trip-card:last-child img {
+  height: 100%;
+  min-height: 200px;
+}
+
+/* ============================================================
+   TRIPS PAGE — Summary Table
+   ============================================================ */
+.trips-table {
+  overflow-x: auto;
+}
+
+.trips-table h2 {
+  margin-bottom: 16px;
+}
+
+.trips-table table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+}
+
+.trips-table th {
+  background-color: var(--primary-color);
+  color: #fff;
+  padding: 10px 14px;
+  text-align: left;
+  font-family: var(--heading-font);
+}
+
+.trips-table td {
+  padding: 10px 14px;
+  border-bottom: 1px solid var(--secondary-color);
+}
+
+.trips-table tr:nth-child(even) td {
+  background-color: var(--secondary-color);
+}
+
+.trips-table tr:hover td {
+  background-color: #d6eaf3;
+}
+
+/* ============================================================
+   TRIPS PAGE — Call to Action
+   ============================================================ */
+.trips-cta {
+  text-align: center;
+  background-color: var(--primary-color);
+  border-left: none;
+  color: #fff;
+  padding: 36px 24px;
+}
+
+.trips-cta h2 {
+  color: #fff;
+  margin-bottom: 12px;
+}
+
+.trips-cta p {
+  color: var(--secondary-color);
+  margin-bottom: 20px;
+  line-height: 1.7;
+}
